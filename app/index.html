@@ -1,0 +1,38 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Dual Axis</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div id="main">
+            <div id="loading" style="position: absolute; z-index:2; width:100%; text-align:center; left:0; top: 40%; font-size: 12px; color: #222;">Loading data...</div>
+            <div id="chart"></div>
+            <div id="preload"></div>
+        </div>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/highcharts/highcharts.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/utility.js"></script>
+        <script src="scripts/compiled.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

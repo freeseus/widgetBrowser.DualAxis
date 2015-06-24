@@ -1,0 +1,68 @@
+@import 'fonts';
+@import 'var';
+@import 'elements';
+
+
+////////////////////////////////////////////
+// Main layout
+////////////////////////////////////////////
+
+#preload{
+	position: absolute;
+	top: -5000px;
+	left: 5000px;
+}
+
+#main{
+	display: none;
+	position: absolute;
+	margin: auto 0 auto 0;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	font-size: 24px;
+	height: 100%;
+	margin: 0px;
+}
+
+#main.active{
+	display: block;
+}
+
+#main.centered{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#chart{
+	width: 100%;
+	height: 338px;
+	margin: 0;
+	position: relative;
+	z-index: 3;
+	background-color: #fff1e0;
+}
+
+.highcharts-legend-item{
+	pointer-events: none;
+}
+
+.highcharts-tooltip{
+	pointer-events: none;
+
+	img{
+		width: 250px;
+		height: 175px;
+		margin-bottom: 4px;
+	}
+}
+
+.highcharts-tooltip.long span{
+	height: auto;
+	width: 250px;
+	background-color: #fff;
+	overflow: auto;
+	line-height: 1.35em;
+	white-space: normal !important;
+}

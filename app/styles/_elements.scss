@@ -1,0 +1,157 @@
+////////////////////////////////////////////
+// Elements
+////////////////////////////////////////////
+
+html, body{
+	height: 100%; //if you want divs to expand vertical by setting them to 100%
+	width: 100%;
+	font-family: $benton;
+	font-size: 22px;
+	background-color: #fff1e0;
+	margin: 0;
+	//-webkit-text-stroke: 0.25px;
+	overflow: hidden;
+}
+
+body{
+	display: block; //for center
+	@extend .disableSelect; // should not be able to select elements by default
+	@extend .disableTap;
+}
+
+ul, li{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	@extend .disableSelect;
+	@extend .disableTap;
+}
+
+ul{
+	margin-bottom: 2em;
+}
+
+svg{
+	//width: 250px;
+	//height: 255px;
+	font-family: $arial !important;
+}
+
+a, a:hover, a:link, a:active, a:focus, a:visited{
+	text-decoration: none;
+	color: inherit;
+	@extend .pointer;
+	@extend .disableSelect;
+	@extend .disableTap;
+}
+
+img{
+	font-size: 0px;
+	line-height: 0px;
+	@extend .disableDrag;
+}
+
+input[type='checkbox']{
+	@extend .pointer;
+	@extend .disableSelect;
+	@extend .disableTap;
+	width: 3em;
+	height: 3em;
+	margin: 0 1em 0 0;
+	border-radius: 4px;
+	background-color: rgba(0,0,0,0.15);
+	position: relative;
+	top: 0.9em;
+	-webkit-appearance: none;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.25);
+}
+
+input[type=checkbox]:hover{
+	background-color: rgba(0,0,0,0.25);
+}
+
+input[type=checkbox]:checked{
+	background-color: rgba(0,128,0,0.75);
+}
+
+input[type=checkbox] + div.check{
+	display: none;
+	color: #fff;
+	text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	left: 0.15em;
+	top: 0.8em;
+}
+
+input[type=checkbox]:checked + div.check{
+	display: block;
+}
+
+select.navigator{
+	width: 2.5em;
+	margin: 5px;
+}
+
+select.navigator.locationType{
+	background-image: url(../images/drink.png);
+	background-repeat: no-repeat;
+	background-size: 55%;
+	background-position: center;
+}
+
+select.navigator.locationName{
+	background-image: url(../images/pin.png);
+	background-repeat: no-repeat;
+	background-size: 45%;
+	background-position: center;
+}
+
+select.navigator.specific{
+	width: inherit;
+	background-image: none;
+}
+
+input[type=button], select.navigator{
+	-webkit-appearance: none;
+	border: none;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	padding: 0.5em;
+	border-radius: 4px;
+	@extend .pointer;
+	@extend .disableSelect;
+	@extend .disableTap;
+}
+
+input[type=button].promptButton, select.navigator{
+	color: rgba(255,255,255,0.85);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.navigator.disabled.custom{
+	background-color: rgb(190, 100, 20);
+}
+
+input[type=button].promptButton.deleteChar{
+	background-color: rgba(175,20,30,0.5);
+}
+
+input[type=button].promptButton.navigator, select.navigator{
+	background-color: rgba(0, 128, 0, 0.75);
+}
+
+
+input[type=button].promptButton.navigator, select.navigator{
+	//background-color: rgba(23, 144, 155, 0.75)
+}
+
+label{
+	@extend .pointer;
+	@extend .disableSelect;
+	@extend .disableTap;
+	//font-weight: normal;
+	display: block;
+}

@@ -1,0 +1,208 @@
+////////////////////////////////////////////
+// Fonts
+////////////////////////////////////////////
+
+$arial: Arial, Helvetica, sans-serif;
+$georgia: Georgia, 'Times New Roman', serif;
+$verdana: Verdana, Arial, sans-serif;
+
+$benton: 'BentonSans', serif;
+$clarion: 'Clarion', serif;
+$miller: 'MillerDisplay', serif;
+
+
+////////////////////////////////////////////
+// Glyph coloring
+////////////////////////////////////////////
+
+$ftColorPink0: #fff9f1;
+$ftColorPink1: #fff1e0;
+$ftColorPink2: #f6e9d8;
+$ftColorPink3: #e9decf;
+
+$ftColorWarmGrey: #a7a59b;
+$ftColorWarmGrey2: #74736c;
+$ftColorCoolGrey: #777777;
+$ftColorDarkGrey: #43423e;
+$ftColorDarkGrey2: #222222;
+
+$ftColorMultiRed: #c36256;
+$ftColorMultiOrange: #eda45e;
+$ftColorMultiCoffee: #94826b;
+$ftColorMultiYellow: #eed485;
+$ftColorMultiGreen: #a6a471;
+$ftColorMultiTurquoise: #819e9a;
+$ftColorMultiBlue: #75a5c2;
+$ftColorMultiPurple: #736e7e;
+$ftColorMultiEggplant: #936971;
+$ftColorMultiPlatinum: #c1b8b4;
+
+$ftColorStrongGreen: #458b00;
+$ftColorStrongRed: #cc0000;
+
+$accentColor: $ftColorMultiRed;
+
+$offwhite: rgba(255,255,255,0.85);
+$offblack: rgba(0,0,0,0.75);
+
+
+////////////////////////////////////////////
+// Glyph modifiers
+////////////////////////////////////////////
+
+.accent{
+	color: $accentColor;
+}
+
+.loud{
+	font-weight: bold;
+}
+
+.stressed{
+	font-style: italic;
+}
+
+.caps{
+	text-transform: uppercase;
+}
+
+.smallcaps{
+	font-variant: small-caps;
+}
+
+.capital{
+	text-transform: capitalize;
+}
+
+.space1px{
+	letter-spacing: 1px;
+}
+
+.space2px{
+	letter-spacing: 2px;
+}
+
+////////////////////////////////////////////
+// Rendering
+////////////////////////////////////////////
+
+.invisible{
+	visibility: hidden !important;
+}
+
+.visible{
+	visibility: visible !important;
+}
+
+.nodisplay{
+	display: none !important;
+}
+
+.disabled{
+	pointer-events: none;
+	opacity: 0.25;
+}
+
+
+////////////////////////////////////////////
+// Positioning
+////////////////////////////////////////////
+
+.textLeft{
+	text-align: left;
+}
+
+.textRight{
+	text-align: right;
+}
+
+.textCenter{
+	text-align: center;
+}
+
+.pointer{
+	cursor: pointer !important;
+}
+
+.inline{
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+////////////////////////////////////////////
+// Behavior
+////////////////////////////////////////////
+
+.arrowNotCaret{
+	cursor: default;
+}
+
+.disableSelect{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	@extend .arrowNotCaret;
+}
+
+.disableTap{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	outline: 0;
+}
+
+.disableDrag{
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	user-drag: none;
+}
+
+.selectable{
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+}
+
+.containerWrapImage{ //for when a div contains an image and you want no space around the image, and perhaps want to use border-radius to round the image
+	display: inline-block;
+	overflow: hidden;
+	line-height: 0px;
+}
+
+
+////////////////////////////////////////////
+// Behavior bug hacks
+////////////////////////////////////////////
+
+.preventFlicker{
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.scrollable{
+	@extend .preventFlicker;
+}
+
+////////////////////////////////////////////
+// Input design
+////////////////////////////////////////////
+
+.blankInput{
+	-moz-box-shadow: none;
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+
+////////////////////////////////////////////
+// Shadow design
+////////////////////////////////////////////
+
+.textShadowOnDarkText{
+	text-shadow: 0 1px 0 rgba(255,255,255,0.33), 0 -1px 0 rgba(0,0,0,0.15);
+}
+
+.textShadowOnLightText{
+	text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
